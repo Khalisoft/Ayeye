@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title></title>
+ <link rel="stylesheet" href="reset.css" >
+ <link rel="stylesheet" href="home.css">
+ <link rel="stylesheet" href="aux.css">
+ 
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Open+Sans:wght@400;700&family=Andika+New+Basic&family=Lato&family=Sniglet&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+	
+	<section id="editor-popup" class="popup display-none">
+	<div class="popup-wrapper">
+		<p class="popup-close material-icons" id="close-popup">close</p>
+		<p class="details">Click on the camera icon below to choose your image</p>
+		<div class="editor-area">
+			<label id="camera" class="material-icons">camera_alt
+			<input type="file" accept=".png, .jpeg, .jpg" id="input-image"></label>
+			<img id="pre-profile" class="" src="">
+		</div>
+		
+		<div id="editor-controls">
+			<input type="range" min="0" max="100" value="50" class="slider" id="zoom-range" disabled>
+			<input type="range" min="0" max="100" value="50" step="25" class="slider" id="rotate" disabled>
+			</div>
+		
+		<button class="button1" id="finish-edit">Continue</button>
+	</div>
+</section>
+
+
+	<section id="save-popup" class="popup display-none">
+		<div class="popup-wrapper">
+			
+		<p class="popup-close material-icons" id="close-popup2">close</p>
+		<div id="final-area" class="editor-area" >
+			<img id="final-image" src=""/>
+		</div>
+		
+		<a href="javascript:void(0)" class="button1" id="download">Download</a>
+		
+	</div>
+</section>
+
+
+<!-- MAIN -->
+
+<section id="first">
+<header>
+	<img id="logo" src="img/logo.png"/>
+	<p class="ayeye-text">Ayeye</p>
+	<p class="ayeye-tag">A CHRISTMAS MUSICAL</p>
+</header>
+
+<div id="flyer-container">
+		<div id="profile-container">
+		 <img id="profile" src="" />
+		</div>
+	<img id="flyer" src="img/ayeye2.png"/>
+</div>
+
+
+<div id="controls">
+	<button id="add">Add Image</button>
+		<butto id="save-button">Save Image</button>
+</div>
+</section>
+
+
+<section id="countdown">
+	<div class="details">
+	<h1>Let the <span>countdown</span> begin!</h1>
+	<p class="underline">Sunday, 20th. 2020</p>
+	</div>
+	
+	<div id="timer">
+		<div id="timetest" class="hour timer-box"><p>01</p></div>
+		<p class="dot">:</p>
+  <div class="minute timer-box"><p>15</p></div>
+  <p class="dot">:</p>
+  <div class="second timer-box"><p>32</p></div>
+	</div>
+	
+	<div>
+		<a href="https://www.eventbrite.com/e/ayeye-the-musical-tickets-129133203889" id="register">Register Today!</a>
+		<div class="social"></div>
+	</div>
+	
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/tinygesture.js"></script>
+<!-- Custom Script -->
+<script src="main.js"></script>
+</body>
+</html>
